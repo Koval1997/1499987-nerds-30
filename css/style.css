@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+      url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+      url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+      url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --basic-white: #ffffff;
+  --special-elements: #eeeeee;
+  --icons-social: #e1e1e1;
+
+  --text-big: #000000;
+  --text-small: #283136;
+  --text-buttons: #ffffff;
+  --text-prompt: #444444;
+  --text-contacts: #666666;
+
+  --button-red: #f8565a;
+  --button-red-hover: #e74246;
+  --button-red-focus: #d7373b;
+  --button-green: #00ca74;
+  --button-green-hover: #00bc6c;
+  --button-green-focus: #00aa62;
+  --button-yellow: #efc849;
+  --button-yellow-hover: #eab534;
+  --button-yellow-focus: #e5a722;
+  --button-focus-text: rgba(255, 255, 255, 0.3);
+  --button-close: rgba(251, 86, 90, 0.3);
+  --button-slider-circle: #c1c1c1;
+  --button-filter-selection: #eeeeee;
+  --button-filter-selection-hover: #dfdfdf;
+  --button-filter-selection-focus: #d5d5d5;
+
+  --background-svg: #a6a6a6;
+  --form-border: #d7d7d7;
+  --icon-basket: #a6a6a6;
+  --text-placeholder: #444444;
+  --shadow-img-template: rgba(0, 1, 1, 0.25);
+  --shadow-modal-form: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  min-width: 960px;
+  margin: 0px;
+  padding: 0px;
+  font-style: normal;
+  font-family: "Roboto", "Courier New", Courier, monospace;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main__header {
+  background-color: var(--special-elements);
+}
+
+.navigation__menu {
+  list-style: none;
+}
+
+.navigation__menu a,
+.basket {
+  color: var(--text-big);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.navigation__menu a:hover,
+.basket:hover {
+  color: var(--button-standart);
+}
+
+.navigation__menu a:focus,
+.basket:focus {
+  color: var(--text-big);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.slider__slogan {
+  color: var(--text-big);
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.slider__text {
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button {
+  border-radius: 3px;
+  border: none;
+  color: var(--basic-white);
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.button--red,
+.button--template {
+  background-color: var(--button-red);
+}
+
+.button--red:hover,
+.button--template:hover {
+  background-color: var(--button-red-hover);
+}
+
+.button--red:focus {
+  background-color: var(--button-red-focus);
+  mix-blend-mode: normal;
+  color: var(--button-focus-text);
+}
+
+.button--green {
+  background-color: var(--button-green);
+}
+
+.button--green:hover {
+  background-color: var(--button-green-hover);
+}
+
+.button--green:focus {
+  background-color: var(--button-green-focus);
+  mix-blend-mode: normal;
+  color: var(--button-focus-text);
+}
+
+.button--yellow {
+  background-color: var(--button-yellow);
+}
+
+.button--yellow:hover {
+  background-color: var(--button-yellow-hover);
+}
+
+.button--yellow:focus {
+  background-color: var(--button-yellow-focus);
+  mix-blend-mode: normal;
+  color: var(--button-focus-text);
+}
+
+.offers__list {
+  list-style: none;
+}
+
+.offers__list__item h3 {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.description__slogan {
+  color: var(--text-big);
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.offers__list__item__text,
+.description__text {
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.description__advantages {
+  color: var(--text-small);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.description__advantages__list {
+  list-style-image: url("../img/list.svg");
+}
+
+.description__advantages__list__item {
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.description__advantages__quality {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.description__advantages__quality__list {
+  list-style: none;
+}
+
+.quality__list__item__numbers {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.quality__list__item__percent {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  vertical-align: text-top;
+}
+
+.quality__list__item__text {
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.partners {
+  border-top: 2px solid var(--special-elements);
+  border-bottom: 2px solid var(--special-elements);
+}
+
+.partners__list {
+  list-style: none;
+}
+
+.partners__list img {
+  opacity: 0.2;
+}
+
+.partners__list img:hover {
+  opacity: 1;
+}
+
+.contacts {
+  background-color: var(--basic-white);
+}
+
+.contacts__title {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.contacts__address,
+.contacts__phone {
+  color: var(--text-contacts);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer__offer {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.footer__discount {
+  color: var(--text-prompt);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.social__list {
+  list-style: none;
+}
+
+.social__list__item {
+  width: 81px;
+  height: 81px;
+  background: linear-gradient(0deg, var(--icons-social), var(--icons-social)), var(--basic-white);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.social__list__item:hover {
+  background: linear-gradient(0deg, var(--button-red-hover), var(--button-red-hover)), var(--basic-white);
+}
+
+.social__list__item:focus {
+  background: linear-gradient(0deg, var(--button-red-focus), var(--button-red-focus)), var(--basic-white);
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
