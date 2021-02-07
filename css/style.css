@@ -177,7 +177,7 @@ img {
   list-style: none;
 }
 
-.offers__list__item h3 {
+.offers__list-item h3 {
   color: var(--text-big);
   font-weight: bold;
   font-size: 24px;
@@ -192,7 +192,7 @@ img {
   line-height: 45px;
 }
 
-.offers__list__item__text,
+.offers__list-item-text,
 .description__text {
   color: var(--text-small);
   font-weight: normal;
@@ -208,18 +208,18 @@ img {
   text-transform: uppercase;
 }
 
-.description__advantages__list {
+.description__advantages-list {
   list-style-image: url("../img/list.svg");
 }
 
-.description__advantages__list__item {
+.description__advantages-list-item {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
 
-.description__advantages__quality {
+.description__advantages-quality {
   color: var(--text-big);
   font-weight: bold;
   font-size: 16px;
@@ -227,18 +227,18 @@ img {
   text-transform: uppercase;
 }
 
-.description__advantages__quality__list {
+.description__advantages-quality-list {
   list-style: none;
 }
 
-.quality__list__item__numbers {
+.quality__list-item-numbers {
   color: var(--text-big);
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
 }
 
-.quality__list__item__percent {
+.quality__list-item-percent {
   color: var(--text-big);
   font-weight: bold;
   font-size: 26px;
@@ -246,7 +246,7 @@ img {
   vertical-align: text-top;
 }
 
-.quality__list__item__text {
+.quality__list-item-text {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
@@ -308,7 +308,7 @@ img {
   list-style: none;
 }
 
-.social__list__item {
+.social__list-item {
   width: 81px;
   height: 81px;
   background: linear-gradient(0deg, var(--icons-social), var(--icons-social)), var(--basic-white);
@@ -316,11 +316,11 @@ img {
   text-align: center;
 }
 
-.social__list__item:hover {
+.social__list-item:hover {
   background: linear-gradient(0deg, var(--button-red-hover), var(--button-red-hover)), var(--basic-white);
 }
 
-.social__list__item:focus {
+.social__list-item:focus {
   background: linear-gradient(0deg, var(--button-red-focus), var(--button-red-focus)), var(--basic-white);
   box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
 }
