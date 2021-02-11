@@ -45,10 +45,12 @@
   --button-focus-text: rgba(255, 255, 255, 0.3);
   --button-close: rgba(251, 86, 90, 0.3);
   --button-slider-circle: #c1c1c1;
-  --button-filter-selection: #eeeeee;
-  --button-filter-selection-hover: #dfdfdf;
-  --button-filter-selection-focus: #d5d5d5;
-
+  --button-filter: #eeeeee;
+  --button-filter-hover: #dfdfdf;
+  --button-filter-focus: #d5d5d5;
+  --border-pagination-button: #dbdbdb;
+  --shadow-button-filter: rgba(0, 1, 1, 0.1);
+  
   --background-svg: #a6a6a6;
   --form-border: #d7d7d7;
   --icon-basket: #a6a6a6;
@@ -129,13 +131,11 @@ img {
   text-transform: uppercase;
 }
 
-.button--red,
-.button--template {
+.button--red {
   background-color: var(--button-red);
 }
 
-.button--red:hover,
-.button--template:hover {
+.button--red:hover {
   background-color: var(--button-red-hover);
 }
 
@@ -322,5 +322,192 @@ img {
 
 .social__list-item:focus {
   background: linear-gradient(0deg, var(--button-red-focus), var(--button-red-focus)), var(--basic-white);
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
+
+.page__title {
+  color: var(--text-big);
+  font-weight: 500px;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.filter legend {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter__price {
+  background-color: var(--special-elements);
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter input {
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.4;
+}
+
+.filter input:hover {
+  opacity: 1;
+}
+
+.filter input:focus {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.button--filter {
+  background-color: var(--button-filter);
+  border-radius: 3px;
+  color: var(--text-big);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button--filter:hover {
+  background-color: var(--button-filter-hover);
+  color: var(--text-big);
+}
+
+.button--filter:focus {
+  background-color: var(--button-filter-focus);
+  color: var(--text-big);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
+
+.sort__selection__title {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.sort__selection ul {
+  list-style: none;
+}
+
+.button--sort--current {
+  background-color: var(--basic-white);
+  color:var(--text-big);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.button--sort {
+  background-color: var(--basic-white);
+  color:var(--text-big);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.button--sort:hover {
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.button--sort:focus {
+  opacity: 1;
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
+
+.filter__result--list {
+  list-style: none;
+}
+
+.filter__result-list li:hover {
+  box-shadow: 0px 6px 15px var(--shadow-img-template);
+  border-radius: 5px;
+}
+
+.filter__result-list-item-details {
+  background-color: var(--special-elements);
+}
+
+.filter__result-list-item-details-buy {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.filter__result-list-item-details-buy:hover {
+  color: var(--button-red);
+}
+
+.filter__result-list-item-details-buy:focus {
+  color: var(--text-big);
+  opacity: 0.3;
+}
+
+.filter__result-list-item-details-text {
+  color: var(--text-contacts);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.pagination__list {
+  list-style: none;
+}
+
+.pagination__button-current {
+  background-color: var(--basic-white);
+  color: var(--text-big);
+  border: 3px solid var(--border-pagination-button);
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.pagination__button {
+  background-color: var(--button-filter);
+  color: var(--text-big);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.pagination__button:hover {
+  background-color: var(--button-filter-hover);
+}
+
+.pagination__button:focus {
+  background-color: var(--button-filter-focus);
+  mix-blend-mode: normal;
+  opacity: 0.3;
   box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
 }

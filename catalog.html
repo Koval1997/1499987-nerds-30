@@ -6,31 +6,39 @@
   <title>Html Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <a href="index.html">
+  <header class="main__header">
+    <a class="main__header-logo" href="index.html">
       <img src="img/logo.svg" width="160" height="65" alt="logotype" />
     </a>
-    <nav>
-      <ul>
+    <nav class="navigation">
+      <ul class="navigation__menu">
         <li><a href="blank.html">Студия</a></li>
         <li><a href="blank.html">Клиенты</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
     </nav>
-    <a href="blank.html">Корзина</a>
+    <a class="basket" href="blank.html">Корзина</a>
   </header>
-  <main>
-    <h1>Магазин готовых шаблонов</h1>
-    <section>
+  <main class="main__content">
+    <h1 class="page__title">Магазин готовых шаблонов</h1>
+    <section class="filter">
       <h2>Фильтр товаров</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend>Стоимость:</legend>
-          от 0<input type="range" name="cost" id="cost" step="100" min="0" max="15000" />до 15000
+          <span>от
+            <span class="filter__price">0</span>
+          </span>
+          <input type="range" name="cost" id="cost" step="100" min="0" max="15000" />
+          <span>до
+            <span class="filter__price">15 000</span>
+          </span>
         </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
@@ -74,121 +82,161 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button--filter" type="submit">Показать</button>
       </form>
     </section>
-    <section>
-      <h2>Сортировать:</h2>
+    <section class="sort__selection">
+      <h2 class="sort__selection__title">Сортировать:</h2>
       <ul>
-        <li>По цене</li>
-        <li>По типу</li>
-        <li>По названию</li>
+        <li>
+          <button class="button--sort--current">По цене</button>
+        </li>
+        <li>
+          <button class="button--sort">По типу</button>
+        </li>
+        <li>
+          <button class="button--sort">По названию</button>
+        </li>
       </ul>
     </section>
-    <section>
+    <section class="filter__result">
       <h2>Результат фильтрации</h2>
-      <ul>
-        <li>
+      <ul class="filter__result-list">
+        <li class="filter__result-list-item">
           <p>
             Строка браузера
           </p>
           <a href="#">
-            <img src="img/img-sedona.jpg" width="359" height="578" alt="Sedona"/>
+            <img src="img/img-sedona.jpg" width="359" height="578" alt="Sedona" />
           </a>
-          <p>
-            Sedona<br>
-            Информационный сайт для туристов<br>
-            <button type="button">9 900 ₽</button>
-          </p>
+          <section class="filter__result-list-item-details">
+            <a class="filter__result-list-item-details-buy" href="#">Sedona</a>
+            <p class="filter__result-list-item-details-text">Информационный сайт<br />для туристов</p>
+            <a class="button button--red" href="#">9 900 &#8381</a>
+          </section>
         </li>
-        <li>
+        <li class="filter__result-list-item">
           <p>
             Строка браузера
           </p>
           <a href="#">
-            <img src="img/img-pink.jpg" width="358" height="578" alt="Pink"/>
+            <img src="img/img-pink.jpg" width="358" height="578" alt="Pink" />
           </a>
+          <section class="filter__result-list-item-details">
+            <a class="filter__result-list-item-details-buy" href="#">Pink app</a>
+            <p class="filter__result-list-item-details-text">Продуктовый лендинг<br />приложения для iOS и Android</p>
+            <a class="button button--red" href="#">9 900 &#8381</a>
+          </section>
         </li>
-        <li>
+        <li class="filter__result-list-item">
           <p>
             Строка браузера
           </p>
           <a href="#">
-            <img src="img/img-borodinsky.jpg" width="358" height="578" alt="Borodinsky"/>
+            <img src="img/img-borodinsky.jpg" width="358" height="578" alt="Borodinsky" />
           </a>
+          <section class="filter__result-list-item-details">
+            <a class="filter__result-list-item-details-buy" href="#">Barbershop</a>
+            <p class="filter__result-list-item-details-text">Сайт салона красоты.<br />Для мужчин, да.</p>
+            <a class="button button--red" href="#">9 900 &#8381</a>
+          </section>
         </li>
-        <li>
+        <li class="filter__result-list-item">
           <p>
             Строка браузера
           </p>
           <a href="#">
-            <img src="img/img-mishka.jpg" width="358" height="578" alt="Mishka"/>
+            <img src="img/img-mishka.jpg" width="358" height="578" alt="Mishka" />
           </a>
+          <section class="filter__result-list-item-details">
+            <a class="filter__result-list-item-details-buy" href="#">Mishka</a>
+            <p class="filter__result-list-item-details-text">Интернет-магазин<br />вязанных игрушек.</p>
+            <a class="button button--red" href="#">9 900 &#8381</a>
+          </section>
         </li>
-        <li>
+        <li class="filter__result-list-item">
           <p>
             Строка браузера
           </p>
           <a href="#">
-            <img src="img/img-aplus.jpg" width="359" height="578" alt="Aplus"/>
+            <img src="img/img-aplus.jpg" width="359" height="578" alt="Aplus" />
           </a>
+          <section class="filter__result-list-item-details">
+            <a class="filter__result-list-item-details-buy" href="#">A Plus</a>
+            <p class="filter__result-list-item-details-text">Лендинг курсов повышения<br />квалификации</p>
+            <a class="button button--red" href="#">9 900 &#8381</a>
+          </section>
         </li>
-        <li>
+        <li class="filter__result-list-item">
           <p>
             Строка браузера
           </p>
           <a href="#">
-            <img src="img/img-kvast.jpg" width="359" height="578" alt="Kvast"/>
+            <img src="img/img-kvast.jpg" width="359" height="578" alt="Kvast" />
           </a>
+          <section class="filter__result-list-item-details">
+            <a class="filter__result-list-item-details-buy" href="#">Кваст</a>
+            <p class="filter__result-list-item-details-text">Промо-сайт производителя<br />крафтового кваса</p>
+            <a class="button button--red" href="#">9 900 &#8381</a>
+          </section>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="pagination">
       <h2>Пагинация</h2>
-      <ul>
+      <ul class="pagination__list">
         <li>
-          <a href="#">1</a>
+          <a class="pagination__button-current" href="#">1</a>
         </li>
         <li>
-          <a>2</a>
+          <a class="pagination__button" href="#">2</a>
         </li>
         <li>
-          <a href="#">3</a>
+          <a class="pagination__button" href="#">3</a>
         </li>
         <li>
-          <a href="#">Следующая</a>
+          <a class="pagination__button" href="#">Следующая</a>
         </li>
       </ul>
     </section>
   </main>
-  <section>
+  <section class="map">
     <h2>Карта</h2>
     <img src="img/map.png" widht="1440" height="416" alt="map" />
   </section>
-  <section>
-    <h3>Nёrds Design Studio</h3>
-    <p>191186, Санкт-Петербург<br />
-      ул. Б. Конюшенная, д. 19/8</p>
-    <p>
+  <section class="contacts">
+    <h3 class="contacts__title">Nёrds Design Studio</h3>
+    <p class="contacts__address">
+      191186, Санкт-Петербург<br />
+      ул. Б. Конюшенная, д. 19/8
+    </p>
+    <p class="contacts__phone">
       <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
     </p>
-    <a href="blank.html">Напишите нам</a>
+    <a class="button button--red" href="blank.html">Напишите нам</a>
   </section>
-  <footer>
+  </main>
+  <footer class="main__footer">
     <h2>Контакты</h2>
-    <ul>
-      <li>
-        <a href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="vk" /></a>
-      </li>
-      <li>
-        <a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="facebook" /></a>
-      </li>
-      <li>
-        <a href="#"><img src="img/inst-icon.svg" width="21" height="21" alt="instagram" /></a>
-      </li>
+    <ul class="social__list">
+      <a href="#">
+        <li class="social__list-item">
+          <img src="img/vk-icon.svg" width="21" height="15" alt="vk" />
+        </li>
+      </a>
+      <a href="#">
+        <li class="social__list-item">
+          <img src="img/fb-icon.svg" width="12" height="22" alt="facebook" />
+        </li>
+      </a>
+      <a href="#">
+        <li class="social__list-item">
+          <img src="img/inst-icon.svg" width="21" height="21" alt="instagram" />
+        </li>
+      </a>
     </ul>
-    <p>Давайте дружить, это выгодно!</p>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <p class="footer__offer">Давайте дружить, это выгодно!</p>
+    <p class="footer__discount">Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 </body>
 
