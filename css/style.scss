@@ -1,30 +1,38 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+  src: url("../fonts/roboto.woff2") format("woff2"),
+      url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+      url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+      url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
+
 :root {
   --basic-white: #ffffff;
   --special-elements: #eeeeee;
   --icons-social: #e1e1e1;
+
   --text-big: #000000;
   --text-small: #283136;
   --text-buttons: #ffffff;
   --text-prompt: #444444;
   --text-contacts: #666666;
+  
   --button-red: #f8565a;
   --button-red-hover: #e74246;
   --button-red-focus: #d7373b;
@@ -42,6 +50,7 @@
   --button-filter-focus: #d5d5d5;
   --border-pagination-button: #dbdbdb;
   --shadow-button-filter: rgba(0, 1, 1, 0.1);
+  
   --background-svg: #a6a6a6;
   --form-border: #d7d7d7;
   --icon-cart: #a6a6a6;
@@ -50,7 +59,7 @@
   --opacity-color: rgba(0, 0, 0, 0.3);
 }
 
-.center, .catalog-container, .page-title-text, .socials__wrapper, .navigation {
+.center {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
@@ -62,6 +71,7 @@ body {
   line-height: 24px;
   background-color: var(--basic-white);
   font-family: "Roboto", "Courier New", Courier, monospace;
+
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
@@ -150,7 +160,6 @@ a {
 .main__header-logo[href]:hover {
   opacity: 0.7;
 }
-
 .main__header-logo[href]:active {
   opacity: 0.3;
 }
@@ -161,6 +170,7 @@ a {
 }
 
 .navigation {
+  @extend .center;
   display: grid;
   grid-template-columns: 160px 1fr 160px;
   height: 100%;
@@ -194,7 +204,7 @@ a {
   color: var(--button-red);
 }
 
-.navigation__menu-item-link:active {
+.navigation__menu-item-link:active  {
   color: var(--opacity-color);
 }
 
@@ -214,7 +224,7 @@ a {
 .slider__list-item {
   background-repeat: no-repeat;
   background-position: right 0;
-  box-sizing: border-box;
+  box-sizing: border-box ;
   height: 431px;
   display: none;
   padding-top: 78px;
@@ -227,11 +237,9 @@ a {
 .slider__list-item:first-child {
   background-image: url("../img/slider.png");
 }
-
 .slider__list-item:nth-child(2) {
   background-image: url("../img/slider.png");
 }
-
 .slider__list-item:nth-child(3) {
   background-image: url("../img/slider.png");
 }
@@ -350,7 +358,7 @@ a {
 }
 
 .quality__list-item-numbers {
-  grid-row: 1/2;
+  grid-row: 1 / 2;
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
@@ -420,7 +428,7 @@ a {
 }
 
 .map__wrapper {
-  grid-area: 1/1/2/-1;
+  grid-area: 1 / 1 / 2 / -1;
   height: 416px;
 }
 
@@ -430,11 +438,13 @@ a {
 }
 
 .contacts__wrapper {
-  grid-area: 1/2/2/3;
+  grid-area: 1 / 2 / 2 / 3;
   padding: 49px 50px 47px;
   box-sizing: border-box;
+
   width: 319px;
   background-color: var(--basic-white);
+
   align-self: center;
 }
 
@@ -461,6 +471,7 @@ a {
 }
 
 .socials__wrapper {
+  @extend .center;
   display: grid;
   grid-template-columns: 400px 1fr;
   height: 217px;
@@ -488,7 +499,6 @@ a {
 .socials__list-item:hover {
   background-color: var(--button-red-hover);
 }
-
 .socials__list-item:active {
   background-color: var(--sociai-active-bg);
 }
@@ -539,6 +549,7 @@ a {
 }
 
 .page-title-text {
+  @extend .center;
   color: var(--text-big);
   font-weight: 500;
   font-size: 55px;
@@ -547,6 +558,7 @@ a {
 }
 
 .catalog-container {
+  @extend .center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
@@ -601,7 +613,7 @@ a {
 }
 
 .sort__selection-link {
-  color: var(--text-big);
+  color:var(--text-big);
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -617,7 +629,7 @@ a {
 }
 
 .catalog {
-  grid-column: 2/4;
+  grid-column: 2 / 4;
 }
 
 .catalog-list {
@@ -703,5 +715,3 @@ a {
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
 }
-
-/*# sourceMappingURL=style.css.map */
