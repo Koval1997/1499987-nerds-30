@@ -35,80 +35,79 @@
         <a class="cart" href="blank.html">Корзина</a>
       </nav>
     </header>
-    <div class="page-title-wrapper">
-      <h1 class="page-title-text">Магазин готовых шаблонов</h1>
+    <div class="page__title-wrapper">
+      <h1 class="page__title-text">Магазин готовых шаблонов</h1>
     </div>
     <div class="filter-catalog">
       <section class="filters">
         <form class="filters__form" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="filters__form-price filters-form-price">
+          <fieldset class="filters__form-price">
             <legend>Стоимость:</legend>
-            <div class="filters-form-price__range filters-form-price-range">
-              <div class="filters-form-price-range__controls filters-form-price-range-controls">
-                <div class="filters-form-price-range-controls__range">
-                  <div class="filters-form-price-range-controls__bar" style="width: 69%; margin-left: 0"></div>
+            <div class="filters__price-range">
+              <div class="filters__price-controls">
+                <div class="filters__controls-range">
+                  <div class="filters__range-bar" style="width: 69%; margin-left: 0"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 7%"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 62%"></div>
+                <div class="toggle toggle--min" tabindex="0" style="left: 7%"></div>
+                <div class="toggle toggle--max" tabindex="0" style="left: 62%"></div>
               </div>
-              <div class="filters-form-price-range__controls filters-form-price-range-controls">
-                <label for="price-before" class="filters-form-price-range-controls__label">
+              <div class="filters__price-controls">
+                <label for="price-before" class="filters__price-label">
                   от
-                  <input id="price-before" type="number" value="0">
+                  <input id="price-before" type="text" value="0">
                 </label>
-                <label for="price-after" class="filters-form-price-range-controls__label">
+                <label for="price-after" class="filters__price-label">
                   до
-                  <input id="price-after" type="number" value="15000">
+                  <input id="price-after" type="text" value="15000">
                 </label>
               </div>
             </div>
           </fieldset>
-          <fieldset class="filters__form-grids filters-form-grids">
+          <fieldset class="filters__form-grids">
             <legend>Сетка:</legend>
-            <ul class="filters-form-grids__list filters-form-grids-list">
-              <li class="filters-form-grids-list__item filters-form-grids-list-item">
-                <input class="filters-form-grids-list-item__input visually-hidden" type="radio" name="grid-group"
-                  value="adaptive" id="filter-adaptive" checked />
+            <ul class="filters__grids-list">
+              <li class="filters__grids-item">
+                <input class="filters__grids-input visually-hidden" type="radio" name="grid-group" value="adaptive"
+                  id="filter-adaptive" checked />
                 <label for="filter-adaptive">Адаптивная</label>
               </li>
-              <li class="filters-form-grids-list__item">
-                <input class="filters-form-grids-list-item__input visually-hidden" type="radio" name="grid-group"
-                  value="fixed" id="filter-fixed" />
+              <li class="filters__grids-item">
+                <input class="filters__grids-input visually-hidden" type="radio" name="grid-group" value="fixed"
+                  id="filter-fixed" />
                 <label for="filter-fixed">Фиксированная</label>
               </li>
-              <li class="filters-form-grids-list__item">
-                <input class="filters-form-grids-list-item__input visually-hidden" type="radio" name="grid-group"
-                  value="rubber" id="filter-rubber" />
+              <li class="filters__grids-item">
+                <input class="filters__grids-input visually-hidden" type="radio" name="grid-group" value="rubber"
+                  id="filter-rubber" />
                 <label for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filters__form-features">
             <legend>Особенности:</legend>
-            <ul class="filters-form-features__list filters-form-features-list">
-              <li class="filters-form-features-list__item filters-form-features-list-item">
-                <input class="filters-form-features-list-item__input visually-hidden" type="checkbox" name="slider"
-                  id="filter-slider" checked />
+            <ul class="filters__features-list">
+              <li class="filters__features-item">
+                <input class="filters__features-input visually-hidden" type="checkbox" name="slider" id="filter-slider"
+                  checked />
                 <label for="filter-slider">Слайдер</label>
               </li>
-              <li class="filters-form-features-list__item filters-form-features-list-item">
-                <input class="filters-form-features-list-item__input visually-hidden" type="checkbox"
-                  name="block-advantages" id="filter-block-advantages" />
+              <li class="filters__features-item">
+                <input class="filters__features-input visually-hidden" type="checkbox" name="block-advantages"
+                  id="filter-block-advantages" />
                 <label for="filter-block-advantages">Блок преимуществ</label>
               </li>
-              <li class="filters-form-features-list__item filters-form-features-list-item">
-                <input class="filters-form-features-list-item__input visually-hidden" type="checkbox" name="news"
-                  id="filter-news" checked />
+              <li class="filters__features-item">
+                <input class="filters__features-input visually-hidden" type="checkbox" name="news" id="filter-news"
+                  checked />
                 <label for="filter-news">Новости</label>
               </li>
-              <li class="filters-form-features-list__item filters-form-features-list-item">
-                <input class="filters-form-features-list-item__input visually-hidden" type="checkbox" name="gallery"
+              <li class="filters__features-item">
+                <input class="filters__features-input visually-hidden" type="checkbox" name="gallery"
                   id="filter-gallery" />
                 <label for="filter-gallery">Галерея</label>
               </li>
-              <li class="filters-form-features-list__item filters-form-features-list-item">
-                <input class="filters-form-features-list-item__input visually-hidden" type="checkbox" name="cart"
-                  id="filter-cart" />
+              <li class="filters__features-item">
+                <input class="filters__features-input visually-hidden" type="checkbox" name="cart" id="filter-cart" />
                 <label for="filter-cart">Корзина</label>
               </li>
             </ul>
@@ -118,110 +117,106 @@
       </section>
       <section class="catalog">
         <div class="catalog__wrapper">
-          <div class="sort__selection sort-selection">
+          <div class="sort__selection">
             <p class="sort__selection-title">Сортировать:</p>
-            <div class="sort-selection__wrapper">
-              <ul class="sort-selection__list sort-selection-list">
-                <li class="sort-selection-list__item current" tabindex="0">По цене</li>
-                <li class="sort-selection-list__item" tabindex="0">По типу</li>
-                <li class="sort-selection-list__item" tabindex="0">По названию</li>
+            <div class="sort__wrapper">
+              <ul class="sort-selection__list">
+                <li class="sort__item current" tabindex="0">По цене</li>
+                <li class="sort__item" tabindex="0">По типу</li>
+                <li class="sort__item" tabindex="0">По названию</li>
               </ul>
+              <div class="sort__icon current" tabindex="0">
+                <svg role="img" aria-label="Значок по убыванию" width="11" height="10" viewBox="0 0 11 10"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" />
+                </svg>
+              </div>
+              <div class="sort__icon" tabindex="0">
+                <svg role="img" aria-label="Значок по возрастанию" width="11" height="10" viewBox="0 0 11 10"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="M5.5 0L0 10H11L5.5 0Z" />
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
-          <ul class="catalog__list catalog-list">
-            <li class="catalog-list__item catalog-list-item">
+          <ul class="catalog__list">
+            <li class="catalog__item">
               <div>
-                <p>
-                  Строка браузера
-                </p>
                 <a href="#">
-                  <img class="catalog-list-item__img" src="img/img-sedona.jpg" alt="Sedona" />
+                  <img class="catalog__img" src="img/img-sedona.jpg" alt="Sedona" />
                 </a>
               </div>
-              <div class="catalog-list-item-details">
-                <a class="catalog-list-item-details-buy" href="#">Sedona</a>
-                <p class="catalog-list-item-details-text">Информационный сайт<br />для туристов</p>
+              <div class="product__details">
+                <a class="product__details-buy" href="#">Sedona</a>
+                <p class="product__details-text">Информационный сайт<br />для туристов</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog-list__item">
-              <p>
-                Строка браузера
-              </p>
+            <li class="catalog__item">
               <a href="#">
-                <img class="catalog-list-item__img" src="img/img-pink.jpg" alt="Pink" />
+                <img class="catalog__img" src="img/img-pink.jpg" alt="Pink" />
               </a>
-              <div class="catalog-list-item-details">
-                <a class="catalog-list-item-details-buy" href="#">Pink app</a>
-                <p class="catalog-list-item-details-text">Продуктовый лендинг<br />приложения для iOS и Android</p>
+              <div class="product__details">
+                <a class="product__details-buy" href="#">Pink app</a>
+                <p class="product__details-text">Продуктовый лендинг<br />приложения для iOS и Android</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog-list__item">
-              <p>
-                Строка браузера
-              </p>
+            <li class="catalog__item">
               <a href="#">
-                <img class="catalog-list-item__img" src="img/img-borodinsky.jpg" alt="Borodinsky" />
+                <img class="catalog__img" src="img/img-borodinsky.jpg" alt="Borodinsky" />
               </a>
-              <div class="catalog-list-item-details">
-                <a class="catalog-list-item-details-buy" href="#">Barbershop</a>
-                <p class="catalog-list-item-details-text">Сайт салона красоты.<br />Для мужчин, да.</p>
+              <div class="product__details">
+                <a class="product__details-buy" href="#">Barbershop</a>
+                <p class="product__details-text">Сайт салона красоты.<br />Для мужчин, да.</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog-list__item">
-              <p>
-                Строка браузера
-              </p>
+            <li class="catalog__item">
               <a href="#">
-                <img class="catalog-list-item__img" src="img/img-mishka.jpg" alt="Mishka" />
+                <img class="catalog__img" src="img/img-mishka.jpg" alt="Mishka" />
               </a>
-              <div class="catalog-list-item-details">
-                <a class="catalog-list-item-details-buy" href="#">Mishka</a>
-                <p class="catalog-list-item-details-text">Интернет-магазин<br />вязанных игрушек.</p>
+              <div class="product__details">
+                <a class="product__details-buy" href="#">Mishka</a>
+                <p class="product__details-text">Интернет-магазин<br />вязанных игрушек.</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog-list__item">
-              <p>
-                Строка браузера
-              </p>
+            <li class="catalog__item">
               <a href="#">
-                <img class="catalog-list-item__img" src="img/img-aplus.jpg" alt="Aplus" />
+                <img class="catalog__img" src="img/img-aplus.jpg" alt="Aplus" />
               </a>
-              <div class="catalog-list-item-details">
-                <a class="catalog-list-item-details-buy" href="#">A Plus</a>
-                <p class="catalog-list-item-details-text">Лендинг курсов повышения<br />квалификации</p>
+              <div class="product__details">
+                <a class="product__details-buy" href="#">A Plus</a>
+                <p class="product__details-text">Лендинг курсов повышения<br />квалификации</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog-list__item">
-              <p>
-                Строка браузера
-              </p>
+            <li class="catalog__item">
               <a href="#">
-                <img class="catalog-list-item__img" src="img/img-kvast.jpg" alt="Kvast" />
+                <img class="catalog__img" src="img/img-kvast.jpg" alt="Kvast" />
               </a>
-              <div class="catalog-list-item-details">
-                <a class="catalog-list-item-details-buy" href="#">Кваст</a>
-                <p class="catalog-list-item-details-text">Промо-сайт производителя<br />крафтового кваса</p>
+              <div class="product__details">
+                <a class="product__details-buy" href="#">Кваст</a>
+                <p class="product__details-text">Промо-сайт производителя<br />крафтового кваса</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
           </ul>
-          <ul class="pagination__list pagination-list">
-            <li class="pagination-list__item pagination-list-item__page">
-              <a class="pagination-list-item__page--current" href="#">1</a>
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__page current" href="#">1</a>
             </li>
-            <li class="pagination-list__item pagination-list-item__page">
-              <a class="pagination-list-item__page" href="#">2</a>
+            <li class="pagination__item">
+              <a class="pagination__page" href="#">2</a>
             </li>
-            <li class="pagination-list__item">
-              <a class="pagination-list-item__page" href="#">3</a>
+            <li class="pagination__item">
+              <a class="pagination__page" href="#">3</a>
             </li>
-            <li class="pagination-list__item">
-              <a class="pagination-list-item__page" href="#">Следующая</a>
+            <li class="pagination__item">
+              <a class="pagination__page button" href="#">Следующая</a>
             </li>
           </ul>
       </section>
@@ -245,17 +240,17 @@
     <section class="socials">
       <div class="socials__wrapper">
         <ul class="socials__list">
-          <li class="socials__list-item socials-list-item">
-            <a class="socials-list-item__link" href="#">
-              <img src="img/vk-icon.svg" alt="Иконка В контакте" /></a>
+          <li class="socials__list-item">
+            <a class="socials__link" href="#">
+              <img class="socials__vk" src="img/vk-icon.svg" alt="Иконка В контакте" /></a>
           </li>
           <li class="socials__list-item">
-            <a class="socials-list-item__link" href="#">
-              <img src="img/fb-icon.svg" alt="Иконка В контакте" /></a>
+            <a class="socials__link" href="#">
+              <img class="socials__fb" src="img/fb-icon.svg" alt="Иконка В контакте" /></a>
           </li>
           <li class="socials__list-item">
-            <a class="socials-list-item__link" href="#">
-              <img src="img/inst-icon.svg" alt="Иконка В контакте" />
+            <a class="socials__link" href="#">
+              <img class="socials__inst" src="img/inst-icon.svg" alt="Иконка В контакте" />
             </a>
           </li>
         </ul>
