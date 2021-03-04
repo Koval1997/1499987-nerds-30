@@ -267,7 +267,7 @@ a {
   padding: 0;
 }
 
-.slider__list-item {
+.slider-item {
   width: 1160px;
   padding-top: 59px;
   padding-bottom: 80px;
@@ -277,11 +277,11 @@ a {
   background-repeat: no-repeat;
 }
 
-.slider__list-item.active {
+.slider-item--active {
   display: block;
 }
 
-.slider__slogan {
+.slider-item__slogan {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -290,19 +290,19 @@ a {
   color: var(--accent-color);
 }
 
-.slide-smartphone {
+.slider-item--smartphone {
   background-image: url("../img/slide-smartphone.png");
 }
 
-.slide-computer {
+.slider-item--computer {
   background-image: url("../img/slide-computer.png");
 }
 
-.slide-gadget {
+.slider-item--gadget {
   background-image: url("../img/slide-gadget.png");
 }
 
-.slider__text {
+.slider-item__text {
   line-height: 24px;
   margin: 0;
   margin-bottom: 38px;
@@ -327,12 +327,12 @@ a {
   border-bottom: 2px solid var(--special-elements);
 }
 
-.offers__list-item {
+.offers-item {
   display: flex;
   flex-direction: column;
 }
 
-.offers__title {
+.offers-item__title {
   color: var(--text-big);
   font-weight: 700;
   font-size: 24px;
@@ -343,7 +343,7 @@ a {
   order: 2;
 }
 
-.offers__text {
+.offers-item__text {
   line-height: 24px;
   color: var(--text-big);
   margin: 0;
@@ -351,14 +351,14 @@ a {
   order: 3;
 }
 
-.offers__img {
+.offers-item__img {
   display: block;
   width: 300px;
   height: 146px;
   margin-bottom: 25px;
 }
 
-.offers__list-item .button {
+.offers-item .button {
   order: 3;
 }
 
@@ -583,7 +583,7 @@ a {
   background-image: url(../img/mishka.svg);
 }
 
-.map__wrapper {
+.map-and-contacts {
   position: relative;
   height: 416px;
 }
@@ -599,7 +599,7 @@ a {
   height: 100%;
 }
 
-.contacts__wrapper {
+.contacts {
   width: 319px;
   height: 308px;
   box-sizing: border-box;
@@ -627,7 +627,7 @@ a {
   margin-bottom: 18px;
 }
 
-.contacts__wrapper .button {
+.contacts .button {
   width: 219px;
   margin-top: 38px;
 }
@@ -653,12 +653,12 @@ a {
   padding: 0;
 }
 
-.socials__list-item {
+.socials-item {
   width: 81px;
   padding-bottom: 10px;
 }
 
-.socials__link {
+.socials-item__link {
   background-color: var(--icons-social);
   display: flex;
   align-items: center;
@@ -669,7 +669,7 @@ a {
   border-radius: 50%;
 }
 
-.socials__link:hover {
+.socials-item__link:hover {
   background-color: var(--button-red-hover);
 }
 
@@ -688,12 +688,12 @@ a {
   height: 21px;
 }
 
-.footer__inner {
+.socials-promo {
   padding-top: 7px;
   padding-left: 100px;
 }
 
-.footer__inner-offer {
+.socials-promo__text {
   color: var(--text-big);
   font-weight: 700;
   font-size: 36px;
@@ -702,7 +702,7 @@ a {
   margin-bottom: 10px;
 }
 
-.footer__inner-discount {
+.socials-promo__discount {
   color: var(--text-prompt);
   line-height: 22px;
   margin: 0;
