@@ -34,8 +34,10 @@
   --range-toggle-grey: #ababab;
 
   --black-rgb: 0, 0, 0;
+  --black: #000000;
 
   --dark-grey: #4d4d4d;
+  --grey-dark-rgb: 68, 68, 68;
 
   --button-red: #f8565a;
   --button-red-hover: #e74246;
@@ -54,6 +56,8 @@
   --button-filter-focus: #d5d5d5;
   --border-pagination-button: #dbdbdb;
   --shadow-button-filter: rgba(0, 1, 1, 0.1);
+
+  --grey-modal-hover: #b4b9bb;
 
   --background-svg: #a6a6a6;
   --form-border: #d7d7d7;
@@ -329,6 +333,45 @@ a {
   width: 240px;
 }
 
+.slider-paging {
+  position: absolute;
+  bottom: 96px;
+  right: 545px;
+  z-index: 2;
+  width: 88px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__button {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider__button--current {
+  cursor: default;
+}
+
+.slider__button--current::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 2px solid var(--button-slider-circle);
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+}
+
 .offers {
   @extend .center;
   margin-top: 80px;
@@ -475,6 +518,11 @@ a {
   width: 98px;
 }
 
+.benefits__item:nth-child(3) {
+  width: 112px;
+  margin-right: 0;
+}
+
 .benefits__text {
   color: var(--text-small);
   margin: 0;
@@ -493,10 +541,6 @@ a {
   margin-bottom: 11px;
 }
 
-.quality__list-item:nth-child(3) .benefits__percent::before {
-  left: 52px;
-}
-
 .benefits__percent::before {
   content: "%";
   font-weight: 700;
@@ -507,6 +551,10 @@ a {
   left: 78px;
   width: 20px;
   height: 40px;
+}
+
+.benefits__item:nth-child(3) .benefits__percent::before {
+  left: 52px;
 }
 
 .partners {
@@ -724,6 +772,133 @@ a {
   color: var(--text-prompt);
   line-height: 22px;
   margin: 0;
+}
+
+.modal {
+  width: 960px;
+  height: 590px;
+  padding: 63px 100px 84px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 20px 40px rgba(var(--black-rgb), 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 180px;
+  z-index: 3;
+  position: fixed;
+  margin: auto;
+  box-sizing: border-box;
+  display: none;
+}
+
+.modal__tittle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  margin-bottom: 37px;
+  position: relative;
+}
+
+.close__button {
+  background-image: url(../img/modal-close.svg);
+  width: 21px;
+  height: 21px;
+  right: 90px;
+  top: 78px;
+  opacity: 0.3;
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: transparent;
+}
+
+.close__button:hover {
+  opacity: 1;
+}
+
+.close__button:active {
+  opacity: 0.1;
+  outline: none;
+}
+
+.form__data {
+  width: 760px;
+  margin-bottom: 37px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__input {
+  margin: 0;
+  width: 360px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-letter {
+  width: 760px;
+  padding-top: 24px;
+}
+
+.form__input label {
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 9px;
+}
+
+.form__input input,
+.form__input textarea {
+  font: inherit;
+  line-height: 18px;
+  border: 2px solid var(--range-grey);
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  padding: 16px 14px 16px 16px;
+}
+
+.form__input textarea {
+  width: 760px;
+  height: 118px;
+  padding-top: 15px;
+  resize: none;
+}
+
+.form__input input::placeholder,
+.form__input textarea::placeholder {
+  color: rgba(var(--grey-dark-rgb), 0.5);
+}
+
+.form__input input:hover,
+.form__input textarea:hover {
+  border-color: var(--grey-modal-hover);
+}
+
+.form__input input:focus,
+.form__input textarea:hover:focus {
+  border-color: var(--black);
+}
+
+.form__input input:focus::placeholder,
+.form__input textarea:focus::placeholder {
+  color: rgba(var(--grey-dark-rgb), 1);
+}
+
+.form__input input:invalid {
+  border-color: var(--button-red-hover);
+}
+
+.form__input input:invalid::placeholder {
+  color: var(--button-red-hover);
+}
+
+.button--modal {
+  width: 259px;
 }
 
 .page__title {
@@ -1088,7 +1263,6 @@ a {
 .catalog__item:hover .product-details {
   display: block;
 }
-
 
 .product-details__buy {
   color: var(--text-big);
