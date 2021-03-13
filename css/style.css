@@ -31,6 +31,7 @@
   --black: #000000;
   --dark-grey: #4d4d4d;
   --grey-dark-rgb: 68, 68, 68;
+  --grey--dark-l: #4d4d4d;
   --button-red: #f8565a;
   --button-red-hover: #e74246;
   --button-red-focus: #d7373b;
@@ -1037,7 +1038,7 @@ a {
   margin-bottom: 20px;
 }
 
-.grid-input__input + label::before {
+.grid-input__input:not(:checked) + label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1045,7 +1046,7 @@ a {
   width: 25px;
   height: 25px;
   background-color: var(--basic-white);
-  border: 4px solid var(--dark-grey);
+  border: 4px solid var(--grey--dark-l);
   border-radius: 50%;
   box-sizing: border-box;
   opacity: 0.4;
@@ -1093,7 +1094,7 @@ a {
   width: 23px;
   height: 23px;
   background-color: var(--basic-white);
-  border: 2px solid var(--dark-grey);
+  border: 2px solid var(--grey--dark-l);
   border-radius: 3px;
   box-sizing: border-box;
   opacity: 0.4;
@@ -1190,10 +1191,19 @@ a {
 .sort__icon {
   margin-right: 18px;
   cursor: pointer;
+  fill: var(--dark-grey);
+  fill-opacity: 0.2;
 }
 
 .sort__icon--current {
   cursor: default;
+  fill: var(--dark-grey);
+  fill-opacity: 1;
+}
+
+.sort__icon:not(.sort__icon--current):hover {
+  fill: var(--range-toggle-grey);
+  fill-opacity: 1;
 }
 
 .sort__icon:last-child {
