@@ -1115,7 +1115,9 @@ a {
 .features-item__input:hover + label::after,
 .features-item__input:hover + label::before,
 .grid-input__input:hover + label::after,
-.grid-input__input:hover + label::before {
+.grid-input__input:hover + label::before,
+.grid-input__input:focus + label::after,
+.grid-input__input:focus + label::before {
   opacity: 1;
 }
 
