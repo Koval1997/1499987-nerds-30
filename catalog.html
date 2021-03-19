@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
-  <title>Html Academy: Нёрдс</title>
+  <title>Каталог HTML Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest" />
@@ -15,7 +15,7 @@
   <main>
     <header class="header">
       <nav class="navigation">
-        <a class="navigation__logo">
+        <a class="navigation__logo" href="index.html">
           <img src="img/logo.svg" alt="logo" />
         </a>
         <ul class="navigation__menu">
@@ -25,7 +25,7 @@
           <li class="navigation__menu-item">
             <a href="blank.html">Клиенты</a>
           </li>
-          <li class="navigation__menu-item">
+          <li class="navigation__menu-item navigation__menu-item--current">
             <a href="catalog.html">Магазин</a>
           </li>
           <li class="navigation__menu-item">
@@ -35,8 +35,8 @@
         <a class="cart" href="blank.html">Корзина</a>
       </nav>
     </header>
-    <div class="page__title">
-      <h1 class="page__title-text">Магазин готовых шаблонов</h1>
+    <div class="title">
+      <h1 class="title-text">Магазин готовых шаблонов</h1>
     </div>
     <div class="filters-catalog">
       <section class="filters">
@@ -142,11 +142,14 @@
             </div>
           </div>
           <ul class="catalog__list">
-            <li class="catalog__item">
+            <li class="catalog-item">
+              <div class="catalog-item__bar">
+                <div class="points"></div>
+              </div>
               <div>
-                <a href="#">
-                  <img class="product__img" src="img/img-sedona.jpg" alt="Sedona" />
-                </a>
+                <div class="catalog-item__img">
+                  <img src="img/img-sedona.jpg" alt="Sedona" />
+                </div>
               </div>
               <div class="product-details">
                 <a class="product-details__buy" href="#">Sedona</a>
@@ -154,50 +157,65 @@
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img class="product__img" src="img/img-pink.jpg" alt="Pink" />
-              </a>
+            <li class="catalog-item">
+              <div class="catalog-item__bar">
+                <div class="points"></div>
+              </div>
+              <div class="catalog-item__img">
+                <img src="img/img-pink.jpg" alt="Pink" />
+              </div>
               <div class="product-details">
                 <a class="product-details__buy" href="#">Pink app</a>
                 <p class="product-details__text">Продуктовый лендинг<br />приложения для iOS и Android</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img class="product__img" src="img/img-borodinsky.jpg" alt="Borodinsky" />
-              </a>
+            <li class="catalog-item">
+              <div class="catalog-item__bar">
+                <div class="points"></div>
+              </div>
+              <div class="catalog-item__img">
+                <img class="catalog-item__img" src="img/img-borodinsky.jpg" alt="Borodinsky" />
+              </div>
               <div class="product-details">
                 <a class="product-details__buy" href="#">Barbershop</a>
                 <p class="product-details__text">Сайт салона красоты.<br />Для мужчин, да.</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img class="product__img" src="img/img-mishka.jpg" alt="Mishka" />
-              </a>
+            <li class="catalog-item">
+              <div class="catalog-item__bar">
+                <div class="points"></div>
+              </div>
+              <div class="catalog-item__img">
+                <img class="catalog-item__img" src="img/img-mishka.jpg" alt="Mishka" />
+              </div>
               <div class="product-details">
                 <a class="product-details__buy" href="#">Mishka</a>
                 <p class="product-details__text">Интернет-магазин<br />вязанных игрушек.</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img class="product__img" src="img/img-aplus.jpg" alt="Aplus" />
-              </a>
+            <li class="catalog-item">
+              <div class="catalog-item__bar">
+                <div class="points"></div>
+              </div>
+              <div class="catalog-item__img">
+                <img class="catalog-item__img" src="img/img-aplus.jpg" alt="Aplus" />
+              </div>
               <div class="product-details">
                 <a class="product-details__buy" href="#">A Plus</a>
                 <p class="product-details__text">Лендинг курсов повышения<br />квалификации</p>
                 <a class="button button--red" href="#">9 900 &#8381</a>
               </div>
             </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img class="product__img" src="img/img-kvast.jpg" alt="Kvast" />
-              </a>
+            <li class="catalog-item">
+              <div class="catalog-item__bar">
+                <div class="points"></div>
+              </div>
+              <div class="catalog-item__img">
+                <img class="catalog-item__img" src="img/img-kvast.jpg" alt="Kvast" />
+              </div>
               <div class="product-details">
                 <a class="product-details__buy" href="#">Кваст</a>
                 <p class="product-details__text">Промо-сайт производителя<br />крафтового кваса</p>
@@ -242,17 +260,17 @@
         <ul class="socials__list">
           <li class="socials-item">
             <a class="socials-item__link" href="#">
-              <img class="socials__vk" src="img/vk-icon.svg" alt="Иконка В контакте" />
+              <img class="socials-item__vk" src="img/vk-icon.svg" alt="Иконка В контакте" />
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-item__link" href="#">
-              <img class="socials__fb" src="img/fb-icon.svg" alt="Иконка В контакте" />
+              <img class="socials-item__fb" src="img/fb-icon.svg" alt="Иконка В контакте" />
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-item__link" href="#">
-              <img class="socials__inst" src="img/inst-icon.svg" alt="Иконка В контакте" />
+              <img class="socials-item__inst" src="img/inst-icon.svg" alt="Иконка В контакте" />
             </a>
           </li>
         </ul>
