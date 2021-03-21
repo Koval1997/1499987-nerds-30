@@ -611,7 +611,7 @@ a {
   opacity: 0.2;
 }
 
-.partners__list a:hover {
+.partners__list a:hover, a:focus {
   opacity: 1;
 }
 
