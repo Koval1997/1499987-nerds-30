@@ -1065,7 +1065,7 @@ a {
   margin-bottom: 20px;
 }
 
-.grid-input__input:not(:checked) + label::before {
+.grid-item__input:not(:checked) + label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1079,7 +1079,7 @@ a {
   opacity: 0.4;
 }
 
-.grid-input__input:checked + label::after {
+.grid-item__input:checked + label::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -1141,16 +1141,23 @@ a {
 
 .features-item__input:hover + label::after,
 .features-item__input:hover + label::before,
-.grid-input__input:hover + label::after,
-.grid-input__input:hover + label::before {
+.grid-item__input:hover + label::after,
+.grid-item__input:hover + label::before {
   opacity: 1;
 }
 
 .features-item__input:disabled + label::after,
 .features-item__input:disabled + label::before,
-.grid-input__input:disabled + label::after,
-.grid-input__input:disabled + label::before {
+.grid-item__input:disabled + label::after,
+.grid-item__input:disabled + label::before {
   opacity: 0.1;
+}
+
+.features-item__input:focus + label::before,
+.features-item__input:focus + label::after,
+.grid-item__input:focus + label::after {
+  border-color: var(--black);
+  opacity: 1;
 }
 
 .filters__button {
@@ -1323,10 +1330,9 @@ a {
 .product-details {
   .button {
     width: 200px;
-  padding: 17px 72px 15px 72px;
-  box-sizing: border-box;
-  margin: 0 auto;
-
+    padding: 17px 72px 15px 72px;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
 }
 
