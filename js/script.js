@@ -1,4 +1,4 @@
-const showModalButtonSelector = document.querySelector("section.map-and-contacts > div > div.contacts > .button");
+const showModalButtonSelector = document.querySelector("body > footer > section:nth-child(1) > div > div.contacts__wrapper > div > button");
 const modalClassNameSelector = document.querySelector(".modal");
 const formWriteSelector = modalClassNameSelector.querySelector(".modal__form");
 const closeButtonSelector = modalClassNameSelector.querySelector(".close__button");

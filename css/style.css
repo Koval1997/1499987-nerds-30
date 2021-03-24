@@ -658,6 +658,13 @@ a {
   height: 416px;
   width: 100%;
   border: none;
+  position: absolute;
+}
+
+.map iframe {
+  height: 416px;
+  width: 100%;
+  border: none;
 }
 
 .map__img {
@@ -665,15 +672,24 @@ a {
   height: 100%;
 }
 
+.contacts__wrapper {
+  min-height: 416px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .contacts {
   width: 319px;
-  height: 308px;
-  box-sizing: border-box;
   padding: 48px 50px;
-  background-color: var(--basic-white);
-  position: absolute;
   top: 54px;
-  left: 140px;
+  left: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: var(--basic-white);
 }
 
 .contacts__title {
@@ -692,6 +708,10 @@ a {
   line-height: 18px;
   color: var(--text-contacts);
   margin-bottom: 18px;
+}
+
+.phone-number {
+  color: var(--text-contacts);
 }
 
 .contacts .button {
@@ -1453,5 +1473,3 @@ a {
     transform: translateX(20px);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
